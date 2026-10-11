@@ -43,6 +43,21 @@ TaskForge/
 ├── .gitignore
 └── README.md
 ```
+## Screenshots
+
+## Screenshots
+
+### Login Page
+![TaskForge Login Page](screenshots/login.png)
+
+### Admin Dashboard
+![TaskForge Admin Dashboard](screenshots/admin-dashboard.png)
+
+### Task Management
+![TaskForge Task Management](screenshots/task-management.png)
+
+### Member Dashboard
+![TaskForge Member Dashboard](screenshots/member-dashboard.png)
 
 ## Getting Started
 
