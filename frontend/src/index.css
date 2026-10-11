@@ -1,0 +1,241 @@
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f7f7fc;
+  color: #25243b;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+/* ========================================
+   TASKFORGE AUTHENTICATION PAGE
+======================================== */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    color: #20243a;
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(124, 92, 246, 0.14), transparent 32%),
+        radial-gradient(circle at 85% 85%, rgba(70, 120, 255, 0.12), transparent 30%),
+        #f6f7fb;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 40px;
+    border: 1px solid #e2e4ef;
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(32, 36, 58, 0.10);
+}
+
+.auth-brand {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.auth-logo {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    color: #ffffff;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #7557f6, #5940d8);
+    box-shadow: 0 10px 24px rgba(117, 87, 246, 0.28);
+}
+
+.auth-brand h1 {
+    margin: 0;
+    color: #24243b;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.auth-subtitle {
+    margin: 10px 0 0;
+    color: #777b91;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    margin-bottom: 24px;
+    padding: 5px;
+    border: 1px solid #ececf4;
+    border-radius: 13px;
+    background: #f5f5fa;
+}
+
+.auth-tabs button {
+    min-height: 43px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #777b91;
+    font-family: inherit;
+    font-size: 0.94rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-tabs button.active {
+    color: #5c43df;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(32, 36, 58, 0.08);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 0 15px;
+    border: 1px solid #e1e3ef;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #8a8da2;
+}
+
+.auth-input:focus-within {
+    border-color: #8b76f7;
+    box-shadow: 0 0 0 4px rgba(117, 87, 246, 0.11);
+}
+
+.auth-input svg {
+    flex-shrink: 0;
+}
+
+.auth-input input {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #252740;
+    font-family: inherit;
+    font-size: 0.96rem;
+}
+
+.auth-input input::placeholder {
+    color: #a0a3b5;
+}
+
+.auth-submit {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 3px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7557f6, #5940d8);
+    box-shadow: 0 8px 18px rgba(94, 67, 221, 0.2);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.auth-submit:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 11px 24px rgba(94, 67, 221, 0.28);
+}
+
+.auth-submit:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.auth-message {
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid #e7e1ff;
+    border-radius: 10px;
+    background: #f7f4ff;
+    color: #5a43c5;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.auth-footer {
+    margin: 24px 0 0;
+    color: #85889b;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .auth-page {
+        align-items: flex-start;
+        padding: 24px 14px;
+    }
+
+    .auth-card {
+        margin-top: 4vh;
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .auth-brand h1 {
+        font-size: 1.85rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .auth-submit {
+        transition: none;
+    }
+}
